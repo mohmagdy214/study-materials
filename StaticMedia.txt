@@ -1,0 +1,28 @@
+urls.project
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+setting.project
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+MEDIA_URL='media/'
+MEDIA_ROOT=BASE_DIR / "media"
+
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+#before form 
+{% csrf_token %}
